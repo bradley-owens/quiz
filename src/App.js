@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
-
 import Welcome from "./Pages/Welcome";
 import Question from "./Pages/Question";
-import QuestionBox from "./Pages/QuestionBox";
+import { useDispatch } from "react-redux";
+import { quizActions } from "./Store/quiz-slice";
 
 function App() {
-  const [quizData, setQuizData] = useState();
-  const [questionIdNumber, setQuestionIdNumber] = useState([]);
+  const dispatch = useDispatch();
 
   let IdArray = [];
   const fetchQuizData = async () => {
@@ -18,35 +17,18 @@ function App() {
     data.map(({ id }) => {
       IdArray.push(id);
     });
-    setQuestionIdNumber(IdArray);
-    setQuizData(data);
+    dispatch(quizActions.setQuestionsToAnswer(IdArray));
+    dispatch(quizActions.setQuestionBank(data));
   };
 
   useEffect(() => {
     fetchQuizData();
   }, []);
 
-  const moveToNextQuestion = () => {
-    setQuestionIdNumber(questionIdNumber.slice(1, questionIdNumber.length));
-  };
-
-  console.log(questionIdNumber);
   return (
     <Routes>
-      <Route
-        path="/"
-        element={<Welcome identityNumbers={questionIdNumber} />}
-      />
-      <Route
-        path="/:questionId"
-        element={
-          <Question
-            data={quizData}
-            moveToNextQuestion={moveToNextQuestion}
-            identityNumbers={questionIdNumber}
-          />
-        }
-      />
+      <Route path="/" element={<Welcome />} />
+      <Route path="/:questionId" element={<Question />} />
     </Routes>
   );
 }

@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const Welcome = (props) => {
+const Welcome = () => {
+  const questionsToAnswer = useSelector(
+    (state) => state.quizState.questionsToAnswer
+  );
   return (
     <div>
       <h1>Welcome to the Quiz</h1>
       <button>
-        <Link to={`/${props.identityNumbers[0]}`}>Start</Link>
+        <Link to={`/${questionsToAnswer[0]}`}>Start</Link>
       </button>
     </div>
   );
