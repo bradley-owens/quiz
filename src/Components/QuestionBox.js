@@ -40,7 +40,7 @@ const QuestionBox = ({ question, id, options, correct, questionNumber }) => {
         })
       );
     }
-    dispatch(quizActions.moveToNextQuestion());
+    dispatch(quizActions.moveToNextQuestion(id));
   };
   const resetCorrectState = () => {
     dispatch(quizActions.resetAnswer("unanswered"));
@@ -100,7 +100,7 @@ const QuestionBox = ({ question, id, options, correct, questionNumber }) => {
               : `/${questionsToAnswer[0]}`
           }
         >
-          {questionNumber === 10 ? "Finish Test " : "Next"}
+          {questionsToAnswer.length === 0 ? "Finish Test " : "Next"}
         </Link>
       </button>
     </div>

@@ -1,6 +1,6 @@
 import styles from "./Question.module.css";
 import { useParams } from "react-router-dom";
-import QuestionBox from "./QuestionBox";
+import QuestionBox from "../Components/QuestionBox";
 import { useSelector } from "react-redux";
 import QuestionNavigator from "../Components/QuestionNavigator";
 

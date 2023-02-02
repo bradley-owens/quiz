@@ -70,20 +70,18 @@ const quizStateSlice = createSlice({
       state.questionSubmitted = false;
     },
 
-    moveToNextQuestion(state) {
-      // state.questionsAttempted = [
-      //   ...state.questionsAttempted,
-      //   state.questionsToAnswer.shift(),
-      // ];
-
+    moveToNextQuestion(state, action) {
       if (state.questionsToAnswer.length === 0) {
         return;
       }
+      const questionId = action.payload;
 
-      state.questionsAttempted = [
-        ...state.questionsAttempted,
-        state.questionsToAnswer.shift(),
-      ];
+      if (!state.questionsAttempted.includes(questionId)) {
+        state.questionsAttempted = [
+          ...state.questionsAttempted,
+          state.questionsToAnswer.shift(),
+        ];
+      }
       state.questionNumber = state.questionNumber + 1;
     },
   },

@@ -6,7 +6,6 @@ import Welcome from "./Pages/Welcome";
 import Question from "./Pages/Question";
 import { useDispatch } from "react-redux";
 import { quizActions } from "./Store/quiz-slice";
-import { useState } from "react";
 import Submission from "./Pages/Submission";
 
 function App() {
