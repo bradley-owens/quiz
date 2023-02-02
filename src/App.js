@@ -6,9 +6,12 @@ import Welcome from "./Pages/Welcome";
 import Question from "./Pages/Question";
 import { useDispatch } from "react-redux";
 import { quizActions } from "./Store/quiz-slice";
+import { useState } from "react";
+import Submission from "./Pages/Submission";
 
 function App() {
   const dispatch = useDispatch();
+  const [dataLoaded, setDataLoaded] = useState(false);
 
   let IdArray = [];
   const fetchQuizData = async () => {
@@ -19,6 +22,7 @@ function App() {
     });
     dispatch(quizActions.setQuestionsToAnswer(IdArray));
     dispatch(quizActions.setQuestionBank(data));
+    setDataLoaded(true);
   };
 
   useEffect(() => {
@@ -27,8 +31,9 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Welcome />} />
+      <Route path="/" element={<Welcome dataLoaded={dataLoaded} />} />
       <Route path="/:questionId" element={<Question />} />
+      <Route path="/submission" element={<Submission />} />
     </Routes>
   );
 }
