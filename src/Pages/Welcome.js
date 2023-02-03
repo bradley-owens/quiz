@@ -7,11 +7,21 @@ const Welcome = ({ dataLoaded }) => {
     (state) => state.quizState.questionsToAnswer
   );
   return (
-    <div>
-      <h1>Welcome to the Quiz</h1>
-      <button className={dataLoaded ? styles.ready : styles.disabled}>
-        <Link to={`/${questionsToAnswer[0]}`}>Start</Link>
-      </button>
+    <div className={styles.container}>
+      <h1>Welcome </h1>
+      <div className={styles["rules-container"]}>
+        <h2>Rules of the game</h2>
+        <ul>
+          <li> Each Question must be attempted to finish the quiz</li>
+          <li>You may navigate through questions you have already submitted</li>
+          <li>Have fun! I hope you studied up on general knowledge!</li>
+        </ul>
+      </div>
+      <Link to={`/${questionsToAnswer[0]}`}>
+        <button className={dataLoaded ? styles.ready : styles.disabled}>
+          Start
+        </button>
+      </Link>
     </div>
   );
 };

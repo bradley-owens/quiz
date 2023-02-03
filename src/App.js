@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import { Route } from "react-router-dom";
-import { Routes } from "react-router-dom";
 import Welcome from "./Pages/Welcome";
 import Question from "./Pages/Question";
+import Submission from "./Pages/Submission";
+import { useEffect, useState } from "react";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { quizActions } from "./Store/quiz-slice";
-import Submission from "./Pages/Submission";
 
 function App() {
   const dispatch = useDispatch();

@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A multiple choice quiz application where users can answer questions one by one, navigate to previously answered questions, and manage the quiz state using React, Redux, and React Router.
+
+## Project setup
+
+1. Clone the repository from [git@github.com:bradley-owens/quiz.git]
+2. Navigate to the project directory and run `npm install` to install the dependencies.
+3. Run `npm start` to start the development server and visit `http://localhost:3000` in your browser.
+
+## Functionality
+
+- The application retrieves a set of multiple choice questions from an API and presents them to the user, one by one.
+- The user is required to answer each question before proceeding to the next.
+- The quiz state is managed with the help of Redux.
+- Navigation between questions is made possible with the integration of React Router.
+- A user-friendly question navigator has been included, allowing for quick access to previously answered questions with just a click.
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm start`: starts the development server
+- `npm test`: runs the test suite
+- `npm run build`: builds the application for production
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React: a JavaScript library for building user interfaces.
+- Redux: State management using Redux Toolkit for efficient and streamlined data management
+- React Router: Utilizing the React Router library for seamless navigation
+- Fetch: Fetches quiz data and results from an API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Challenges
 
-### `npm test`
+Some challenges that were encountered while making this project include:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Managing the quiz state with Redux and ensuring consistency throughout the application.
+- Implementing a navigation system that allows users to easily access previously answered questions.
+- Keeping track of whether a user has already answered a question and whether they got it right or wrong and updating the score accordingly.
 
-### `npm run build`
+## Contributing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- If you find a bug or have an idea for a feature, please open an issue.
+- Pull requests are always welcome.

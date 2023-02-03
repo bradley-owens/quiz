@@ -17,17 +17,10 @@ const QuestionList = () => {
   }, [questionsAttempted.length]);
 
   return (
-    <div>
-      {questionBank.map((question, index) => {
-        return (
-          <div
-            key={Math.random()}
-            className={
-              questionsToAnswer.includes(question.id)
-                ? styles.disabled
-                : styles.answered
-            }
-          >
+    <div className={styles["navigator-container"]}>
+      <div className={styles.gridContainer}>
+        {questionBank.map((question, index) => {
+          return (
             <Link
               to={
                 questionsToAnswer.includes(question.id)
@@ -35,11 +28,20 @@ const QuestionList = () => {
                   : `/${question.id}`
               }
             >
-              <p>{index + 1}</p>
+              <div
+                key={Math.random()}
+                className={
+                  questionsToAnswer.includes(question.id)
+                    ? styles.disabled
+                    : styles.answered
+                }
+              >
+                <p>{index + 1}</p>
+              </div>
             </Link>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

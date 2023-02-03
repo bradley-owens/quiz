@@ -1,13 +1,14 @@
 import styles from "./Question.module.css";
 import { useParams } from "react-router-dom";
-import QuestionBox from "../Components/QuestionBox";
+import QuestionBox from "../Components/QuestionBox/QuestionBox";
 import { useSelector } from "react-redux";
-import QuestionNavigator from "../Components/QuestionNavigator";
+import QuestionNavigator from "../Components/QuestionNavigator/QuestionNavigator";
 
 const Question = () => {
   const params = useParams();
   const questionBank = useSelector((state) => state.quizState.questionBank);
 
+  // shuffle function to mix up answers so the correct answer is not always the top one
   const shuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -16,7 +17,7 @@ const Question = () => {
     return array;
   };
   return (
-    <div>
+    <div className={styles.container}>
       {questionBank.map((item) => {
         let questionNumber = questionBank.indexOf(item) + 1;
 

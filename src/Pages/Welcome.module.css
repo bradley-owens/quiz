@@ -1,17 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container h1 {
+  font-size: 3.5rem;
+  color: #014f86;
+  border-bottom: 3px solid #014f86;
+}
+
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.rules-container h2 {
+  font-size: 2.5rem;
+  color: rgba(0, 0, 0, 0.758);
+}
+
+ul {
+  list-style: none;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.758);
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
 .ready {
-  font-size: 1rem;
-  border: 2px solid black;
-  padding: 0.2rem;
-  width: 2rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #014f86;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.ready:hover {
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  transition: 0.3s;
 }
 
 .disabled {
-  font-size: 1rem;
-  border: 2px solid black;
-  padding: 0.2rem;
-  width: 2rem;
   background-color: grey;
   border-color: grey;
   color: black;
   cursor: not-allowed;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  font-weight: 700;
 }

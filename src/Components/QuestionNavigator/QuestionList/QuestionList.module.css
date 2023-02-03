@@ -1,0 +1,42 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.answered {
+  background-color: #014f86;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.disabled {
+  background-color: lightgray;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 540px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+}

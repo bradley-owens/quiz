@@ -1,0 +1,30 @@
+.next-question {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #014f86;
+  transition: 0.3s;
+  font-weight: 700;
+}
+.next-question:hover {
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  transition: 0.3s;
+}
+
+.disabled {
+  background-color: grey;
+  border-color: grey;
+  color: black;
+  cursor: not-allowed;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}

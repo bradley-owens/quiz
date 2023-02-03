@@ -1,0 +1,18 @@
+.submit-answer {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  color: white;
+  background-color: #014f86;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+.submit-answer:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
