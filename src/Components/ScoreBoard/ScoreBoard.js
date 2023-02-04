@@ -4,7 +4,7 @@ const ScoreBoard = ({ score, totalQuestions }) => {
   return (
     <div className={styles.container}>
       <h1>Well Done you have completed the quiz!</h1>
-      <div>
+      <div className={styles.score}>
         <h2> Score</h2>
         <h3>
           {score}/{totalQuestions}

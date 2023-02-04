@@ -30,3 +30,17 @@ a {
   color: white;
   font-weight: 700;
 }
+
+@media (max-width: 598px) {
+  .submission-container button {
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    background-color: #014f86;
+    transition: 0.3s;
+  }
+}
