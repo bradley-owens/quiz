@@ -16,6 +16,7 @@ const Question = () => {
     }
     return array;
   };
+
   return (
     <div className={styles.container}>
       {questionBank.map((item) => {

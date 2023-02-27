@@ -13,6 +13,7 @@ function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
 
   let IdArray = [];
+
   const fetchQuizData = async () => {
     const response = await fetch("https://the-trivia-api.com/api/questions ");
     const data = await response.json();
