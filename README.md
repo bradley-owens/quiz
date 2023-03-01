@@ -1,4 +1,4 @@
-# Project Title
+# Quiz
 
 A multiple choice quiz application where users can answer questions one by one, navigate to previously answered questions, and manage the quiz state using React, Redux, and React Router.
 
